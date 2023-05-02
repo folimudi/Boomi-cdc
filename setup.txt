@@ -1,0 +1,11 @@
+CREATE USER 'boomi'@'*' IDENTIFIED BY 'boomi';
+CREATE DATABASE cdc_db;
+GRANT ALL ON *.* to 'boomi'@*;
+USE cdc_db;
+CREATE TABLE Persons (PersonID int NOT NULL,LastName varchar(255) NOT NULL,FirstName varchar(255),Address varchar(255),City varchar(255), Age int, PRIMARY KEY (PersonID));
+INSERT INTO Persons (PersonID, LastName, FirstName, Address, City, Age) VALUES 
+(1000, 'Doe', 'John', '123 Main St', 'New York', 25), 
+(1001, 'Smith', 'Jane', '456 Elm St', 'Los Angeles', 30),
+(1002, 'Johnson', 'David', '789 Oak St', 'Chicago', 35),
+(1003, 'Brown', 'Sarah', '321 Pine St', 'Houston', 40),
+(1004, 'Wilson', 'Mark', '654 Maple St', 'San Francisco', 45);
