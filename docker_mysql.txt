@@ -1,0 +1,2 @@
+docker run --name cdc-mysql -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<REPLACEME> --restart unless-stopped mysql:8
+docker exec -i cdc-mysql mysql -u root -p<REPLACEM> -t < setup.txt
