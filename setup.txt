@@ -1,6 +1,6 @@
 CREATE USER 'boomi'@'*' IDENTIFIED BY 'boomi';
 CREATE DATABASE cdc_db;
-GRANT ALL ON *.* to 'boomi'@*;
+GRANT ALL ON *.* to 'boomi'@'*';
 USE cdc_db;
 CREATE TABLE Persons (PersonID int NOT NULL,LastName varchar(255) NOT NULL,FirstName varchar(255),Address varchar(255),City varchar(255), Age int, PRIMARY KEY (PersonID));
 INSERT INTO Persons (PersonID, LastName, FirstName, Address, City, Age) VALUES 
